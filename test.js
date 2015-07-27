@@ -17,5 +17,9 @@ test('Test', function (t) {
     t.deepEqual(oberr(errorWithCustomData).message, "Custom error");
     t.deepEqual(oberr(errorWithCustomData).customField, 42);
     
+    var errorWithSpecificFields = new Error("Specific fields");
+    errorWithSpecificFields.customField = 19;
+    t.deepEqual(oberr(errorWithSpecificFields, ["message", "customField"]), {message: "Specific fields", customField: 19});
+    
     t.end();
 });
