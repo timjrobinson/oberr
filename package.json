@@ -1,0 +1,28 @@
+{
+  "name": "oberr",
+  "version": "0.0.1",
+  "description": "Turns errors into an object that can be stringified",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "^1.3.1"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timjrobinson/oberr.git"
+  },
+  "keywords": [
+    "error",
+    "object",
+    "stringify"
+  ],
+  "author": "Tim Robinson <tim@timjrobinson.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timjrobinson/oberr/issues"
+  },
+  "homepage": "https://github.com/timjrobinson/oberr"
+}
