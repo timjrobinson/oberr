@@ -1,5 +1,6 @@
 
 module.exports = function (err, fields) {
+    if (!err) return;
     if (fields && !Array.isArray(fields)) throw new Error("Fields should be an array");
     
     var oberr = {};

@@ -21,5 +21,8 @@ test('Test', function (t) {
     errorWithSpecificFields.customField = 19;
     t.deepEqual(oberr(errorWithSpecificFields, ["message", "customField"]), {message: "Specific fields", customField: 19});
     
+    var undefinedError = undefined;
+    t.equal(oberr(undefinedError), undefined);
+    
     t.end();
 });
