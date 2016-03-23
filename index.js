@@ -3,6 +3,9 @@ module.exports = function (err, fields) {
     if (!err) return;
     if (fields && !Array.isArray(fields)) throw new Error("Fields should be an array");
     
+    if (typeof err !== "object")
+        return err;
+    
     var oberr = {};
     Object.getOwnPropertyNames(err).forEach(function(key) {
         if (!fields || fields.indexOf(key) > -1) {
