@@ -4,6 +4,28 @@ var oberr = require("./index");
 var test = require('tap').test;
 var assert = require("assert");
 
+
+test("When err is not an error, it must be returned unharmed", function(t){
+    var cases = [
+        "just a silly string",
+        new Date(),
+        42,
+        { error: "Not an Error" },
+        function(){
+            return "foo",
+        },
+        []
+    ];
+    
+    
+    cases.forEach(function(testCase){
+        t.equal(testCase, oberr(testCase), "Oberr just returned the value it got");
+    });
+    
+    t.end();
+});
+
+
 test('Test', function (t) {
     var err = new Error("Something broke")
     t.deepEqual(Object.keys(oberr(err)), ["stack", "arguments", "type", "message"]);
