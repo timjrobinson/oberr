@@ -12,7 +12,7 @@ test("When err is not an error, it must be returned unharmed", function(t){
         42,
         { error: "Not an Error" },
         function(){
-            return "foo",
+            return "foo";
         },
         []
     ];
