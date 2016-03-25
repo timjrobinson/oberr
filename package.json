@@ -1,6 +1,6 @@
 {
   "name": "oberr",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Turns errors into an object that can be stringified",
   "main": "index.js",
   "dependencies": {},
